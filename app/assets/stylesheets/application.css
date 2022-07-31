@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ #flats {
+  padding: 20px 50px;
+ }
+
+.card-body {
+  background-color: rgb(248, 249, 250);
+ }

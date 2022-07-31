@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <h2 href="#">Beautiful stays only one-click away!</h2>
+    <a class="btn btn-primary" href="#" role="button">Add Flat</a>
+  </div>
+</nav>
+
+
+<div id="flats" class="d-flex justify-content-between flex-wrap">
+  <% @flats.each do |flat| %>
+    <div class="card m-3" style="width: 18rem; heigh">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+          <div class="d-flex justify-content">
+          <h6 class="card-subtitle m-1"><i class="fa fa-users" aria-hidden="true"></i>  <%=flat.number_of_guests%></h6>
+          <h6 class="card-subtitle m-1"><i class="fa fa-usd" aria-hidden="true"></i>   <%=flat.price_per_night%></h6>
+          </div>
+      </div>
+        <a href="#" class="card-link mb-3">More Info</a>
+    </div>
+  <% end %>
+</div>
